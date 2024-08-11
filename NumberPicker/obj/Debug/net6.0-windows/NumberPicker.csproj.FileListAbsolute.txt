@@ -1,0 +1,17 @@
+D:\project\tools_Awith\NumberPicker\bin\Debug\net6.0-windows\NumberPicker.exe
+D:\project\tools_Awith\NumberPicker\bin\Debug\net6.0-windows\NumberPicker.deps.json
+D:\project\tools_Awith\NumberPicker\bin\Debug\net6.0-windows\NumberPicker.runtimeconfig.json
+D:\project\tools_Awith\NumberPicker\bin\Debug\net6.0-windows\NumberPicker.dll
+D:\project\tools_Awith\NumberPicker\bin\Debug\net6.0-windows\NumberPicker.pdb
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.csproj.AssemblyReference.cache
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.Form1.resources
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.csproj.GenerateResource.cache
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.AssemblyInfoInputs.cache
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.AssemblyInfo.cs
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.csproj.CoreCompileInputs.cache
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.dll
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\refint\NumberPicker.dll
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.pdb
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\NumberPicker.genruntimeconfig.cache
+D:\project\tools_Awith\NumberPicker\obj\Debug\net6.0-windows\ref\NumberPicker.dll
