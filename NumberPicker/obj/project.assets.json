@@ -9,19 +9,19 @@
   },
   "packageFolders": {
     "C:\\Users\\Awith\\.nuget\\packages\\": {},
-    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\project\\tools_Awith\\NumberPicker\\NumberPicker.csproj",
+      "projectUniqueName": "D:\\Projects\\VsProjects\\SomeTools\\NumberPicker\\NumberPicker.csproj",
       "projectName": "NumberPicker",
-      "projectPath": "D:\\project\\tools_Awith\\NumberPicker\\NumberPicker.csproj",
+      "projectPath": "D:\\Projects\\VsProjects\\SomeTools\\NumberPicker\\NumberPicker.csproj",
       "packagesPath": "C:\\Users\\Awith\\.nuget\\packages\\",
-      "outputPath": "D:\\project\\tools_Awith\\NumberPicker\\obj\\",
+      "outputPath": "D:\\Projects\\VsProjects\\SomeTools\\NumberPicker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Awith\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -70,7 +75,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }

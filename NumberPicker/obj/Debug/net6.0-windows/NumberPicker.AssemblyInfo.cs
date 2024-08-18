@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NumberPicker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b588c7eb7d56a656d9750902ad9532c490a030c")]
 [assembly: System.Reflection.AssemblyProductAttribute("NumberPicker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NumberPicker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
