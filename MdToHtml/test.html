@@ -1,0 +1,1404 @@
+
+        <!DOCTYPE html>
+        <html lang="zh-CN">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>转换结果</title>
+            <style>
+            :root {
+  --primary-color: #87CEEB; /* 天蓝色 */
+  --secondary-color: #5F9EA0; /* 较深的天蓝色 */
+  --text-color: #333333;
+  --background-color: #F5F5F5;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  color: var(--primary-color);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  padding: 5px 10px;
+  background-color: #e6f3ff;
+  border-left: 5px solid var(--primary-color);
+}
+
+.paragraph {
+  margin-bottom: 1em;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.list {
+  margin-bottom: 1em;
+  padding-left: 2em;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  padding: 10px 10px 10px 30px;
+}
+
+.link {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.list li {
+  margin-bottom: 0.5em;
+}
+
+.code-block {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+}
+
+.code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+  padding: 0;
+}
+
+.inline-code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar li a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1 class="heading">
+ U3D面试沉思录
+</h1>
+<h2 class="heading">
+ 在展示一些面试题前，我想要先说明不同面试场景下的感悟，觉得冗余的同学可以跳过这段。
+</h2>
+<ol class="list">
+ <li>
+  <p class="paragraph">
+   首先面试归根结底是一个
+   <strong>
+    看候选人与面试官是否有缘分的事情
+   </strong>
+   ，因为面试面得多了，很自然就会发现一些潜在的规律，（例如你的预期薪水不符合面试岗位所给到的薪水，你的一些非技术向观点与面试官已有观点冲突......)，当出现上述情况时，大概率你是不会通过这场面试的，就抱着和面试官随便聊聊的心态沟通就行了。若有缘，那么就是接下来的流程。
+  </p>
+ </li>
+ <li>
+  <p class="paragraph">
+   正常和面试官沟通完技术向相关问题时，通过面试官收尾时邀请你提出反问问题的语气与态度也很容易就能
+   <strong>
+    判断出来他对你本场面试表现的一个态度
+   </strong>
+   ，很轻松就能判断出你是否能走接下来的流程。常见的若面试官开始告诉像这样的话语:
+  </p>
+  <ul class="list">
+   <li>
+    “你过来可以先跟着XXXX，后XXXX”.
+   </li>
+   <li>
+    “可以，我就喜欢你们年轻人XXXX，你可以过来XXXXX”.
+   </li>
+   <li>
+    等等等等。即给你安排未来的工作与表达对你当前阶段态度或是能力的认可。
+   </li>
+  </ul>
+  <p class="paragraph">
+   <strong>
+    把握这一步的态度很关键
+   </strong>
+   ，如果你有把握对方对你本次的面试表现很满意，那么在人事谈薪环节你也能拥有主动权，提出平均线以上的水准，若对方表现很想要你，同时你对你本场表现很满意，也看得出来对方很满意，那么在表达礼貌的同时可以尝试提出当前岗位JD的顶薪。
+  </p>
+ </li>
+ <li>
+  <p class="paragraph">
+   老生常谈但确实有很显著的影响——
+   <strong>
+    心态调整的问题
+   </strong>
+   ，一次岗位的面试失败并不意味你什么都不懂，只意味了你和面试岗位对方的预期不够匹配。当面对你意向很高的岗位时，积极且保持适度的紧张我认为是一个很好的行为。但是即使遗憾错过了，再接再厉，这也能成为未来不断强化学习的动力之一。
+  </p>
+ </li>
+ <li>
+  <p class="paragraph">
+   这一步我想要说明的是，针对于面试问题作者贴了一些概要的回答，希望大家是抱着学习的心态而不是背诵的心态，问题中涉及到不懂的基础向概念题，就去查理论，涉及到不懂的工程向问题，就动手去引擎里做去编辑器里写！涉及到不懂得算法向问题，就动手去刷！
+  </p>
+ </li>
+</ol>
+<h2 class="heading">
+ OK，接下来是技术向的问题与概要的答案。(可能有些答案有误，如果大家确认有误可进行修正)
+</h2>
+<p class="paragraph">
+ ​       这部分包含了一小部分社招与绝大部分校招的常见问题，有的问题非常基础，有的问题需要有一些业务向的经验才能答得很贴切。例如UI界面开发中常见的四大优化（Batches，OverDraw,Raycaster,Rebuilding）。以下问题有的可能会涉及到部分企业面试原题，有的就是很常见基础的U3D面试网题，希望大家还是拿来作为对自己知识点起一个检测的作用。
+</p>
+<ol class="list">
+ <li>
+  <h3 class="heading">
+   C#语法部分
+  </h3>
+  <ul class="list">
+   <li>
+    <p class="paragraph">
+     <strong>
+      值和引用类型的区别
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     C#中值类型数据包括了枚举、结构体、可空类型，string是引用类型。引用类型数据包括了接口、类、容器类型、委托。
+    </p>
+    <p class="paragraph">
+     主要区别还是体现在拷贝策略上，值类型数据是拷贝值而引用类型数据则是拷贝引用，继承结构上也有区别，值类型继承于system.valuetype。
+    </p>
+    <p class="paragraph">
+     线程栈上的值类型数据由操作系统管理，在其对象作用域结束以后就会被清理，效率很高，引用类型数据在进程堆内存中由CLR中GC管理。
+    </p>
+    <p class="paragraph">
+     所有引用类型的基类Object类，该类有四个基方法GetHashCode,GetType,Equals,ToString,值类型的基类是ValueType，也是自object派生而来。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      struct 里面如果包含一个类的对象，该对象是存在堆区还是栈区
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     堆区。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      string和stringbuilder的区别
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     string一旦声明其值不可变，否则需要新的实例化。stringbuilder是可修改的字符串缓冲区类。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      string +和string.format拼接字符串会浪费内存么
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     单行代码中使用“+”运算符来拼接字符串编译器会优化为string.Concat(new string[]{})，不同行中的”+=“会比较浪费内存，因为会不断的创建新的用来合成的不可变的string。string.format源码可以看到也是通过stringbuilderbuffer来做拼接的，一定程度上性能和内存是比“+”要好的。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      字符串池有什么用，原理是什么
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     字符串池是CLR一种针对于反复修改字符串对象的优化措施，作用能够一定程度减少内存消耗。原理是内部开辟容器通过键值对的形式注册字符串对象，键是字符串对象的内容，值是字符串在托管堆上的引用。这样当新创建的时候，会去检查，如果不存在就在这个容器中开辟空间存放字符串。string s ="a" + "b" + "c"CLR有优化，只会分配一次内存。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      out和ref的区别？写个函数交换两个实参的值用ref还是out
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     区别是，out用意传出参数值，ref传引用，使用out需要在方法中所有返回路径上对其out声明的形参显式赋值，同时在使用之前需要先声明它，ref不必。用ref。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      c#的GC是如何知道一个对象没有任何引用了
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     GC从root引用（一些常量或静态变量所引用的实例）出发，遍历对象是否还存在引用，否则清除。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      引用环如何处理（A中引用B,B中再引用A）
+     </strong>
+     ?
+    </p>
+    <p class="paragraph">
+     引用环可以用弱引用来解决。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      GC的collect的参数都有什么
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     GC.Collect(int generation, GCCollectionMode mode, bool blocking, bool compacting)
+    </p>
+    <p class="paragraph">
+     有针对于代数的int，有针对于回收模式的枚举，三种default与force与optimize，还有bool值是否阻塞与是否压缩。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      什么是重载
+     </strong>
+     ？
+(方法相关概念)：是指在同一个类中声明具有相同的方法名但拥有不同的形参的方法，即方法签名不同，重载是在编译阶段，根据调用时的传参行为确定具体执行的方法，重载常见的操作行为是写一个基方法，在其之上的一些变种行为使用重载实现， 同时这样也利于后期的维护。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      什么是重写？
+     </strong>
+    </p>
+    <p class="paragraph">
+     (继承重写基类相关概念)：是指在具有继承关系的两个类中通过声明 virtual 与 override 关键字，达到在子类中重写父类相同方法签名方法的效果 。（这里需要注意区分的是在继承链中对于方法的new与override 效果的区分与其相应的含义 ）。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      什么是多态性？
+     </strong>
+    </p>
+    <p class="paragraph">
+     (抽象类与接口相关概念)：是指相同成员签名在不同类中有不同的实现，同时相应的不同对象中相同方法签名也能表现出不同的行为，这个称为多态性。同一个方法签名不能在同一个类中多次实现，所以该同名签名的不同实现必然包含在不同类中。抽象成员是实现多态性的一个手段。实现接口相当于纯粹多态性的体现。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      面向对象的三大特征是什么？
+     </strong>
+    </p>
+    <p class="paragraph">
+     封装、继承、与多态
+    </p>
+    <p class="paragraph">
+     封装：抽象类的实现细节对与之非相关的类进行隐藏，设置数据与行为的权限，自己的方法与数据只会对预期信任的其他抽象类进行开放。
+    </p>
+    <p class="paragraph">
+     继承：逻辑上子类继承父类的基本特征，并根据具体的子类进行变种的抽象，提高了代码的复用性与可维护性。
+    </p>
+    <p class="paragraph">
+     多态：不同类的相同方法签名具有不同的表现行为，这是一个多态性的重要体现。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      面向对象编程的六大原则？
+     </strong>
+    </p>
+    <p class="paragraph">
+     单一职责
+    </p>
+    <p class="paragraph">
+     一个类应该只负责一个职责。
+    </p>
+    <p class="paragraph">
+     开闭原则
+    </p>
+    <p class="paragraph">
+     一个类一旦开发完成，后续增加新的功能就不应该通过修改这个类来完成，而是通过继承，增加新的类。
+    </p>
+    <p class="paragraph">
+     里氏替换原则
+    </p>
+    <p class="paragraph">
+     所有用到一个类的地方都替换成其子类，系统应该仍然可以正常工作。这个原则依赖面向对象的继承特性和多态特性。最典型的就是面向接口编程模式。
+    </p>
+    <p class="paragraph">
+     依赖倒置原则
+    </p>
+    <p class="paragraph">
+     抽象不应该依赖于细节，细节应当依赖于抽象。也就是将高层所依赖的底层中间加一个接口为双方依赖项，面向接口多态编程。
+    </p>
+    <p class="paragraph">
+     接口隔离原则
+    </p>
+    <p class="paragraph">
+     使用多个专门的接口，而不使用单一的总接口，即客户端不应该依赖那些它不需要的接口。尽量使用专一微小的接口，避免无意义多态情况产生。
+    </p>
+    <p class="paragraph">
+     迪米特原则
+    </p>
+    <p class="paragraph">
+     一个软件实体应当尽可能少地与其他实体发生相互作用。即类的实体向其他类提供自身功能接口，避免展示自身实现细节。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      成员访问四种权限？
+     </strong>
+    </p>
+    <p class="paragraph">
+     Private:仅对该类内部开发
+    </p>
+    <p class="paragraph">
+     Public：对所有外部成员提供访问权限
+    </p>
+    <p class="paragraph">
+     Protected对该类及其派生类开放
+    </p>
+    <p class="paragraph">
+     Internal对该程序集公开
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      C#中常用容器？
+     </strong>
+    </p>
+    <p class="paragraph">
+     Array  ArrayList  List
+     <t>
+      LinkList
+      <t>
+      </t>
+     </t>
+    </p>
+    <p class="paragraph">
+     HashSet
+     <t>
+      HashTable  Dictionary
+      <t,t>
+       Queue&lt;&gt; Stack&lt;&gt;
+      </t,t>
+     </t>
+    </p>
+    <p class="paragraph">
+     大量处理值类型数据时若使用非泛型容器会频繁装箱带来不必要性能损耗，即损失了效率。
+    </p>
+    <p class="paragraph">
+     arrayList是一个弱类型的数据容器，维护的是一个对象引用列表，List是一个强类型的数据容器。具体性能消耗会视应用场景决定，比如如果对一个arraylist中重复添加进大量值类型数据，因为它的添加方法签名是obj类型，会将其转换为引用类型数据即装箱再存储其引用地址，而List的方法签名为泛型，当其定义为值类型时在这一步就不会发生装箱，拆箱即反向此过程。
+    </p>
+    <p class="paragraph">
+     字典与hashtable的主要区别体现在一是线程安全性上，hashtable支持多线程读取，单线程写入，字典非线程安全，需要加锁来确保其线程安全性。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      GC（垃圾回收）相关概念？什么是GC？
+     </strong>
+    </p>
+    <p class="paragraph">
+     GC是CLR管理堆内存的垃圾回收机制，会产生gc的一大原因是频繁地生成了引用类型数据后又清除了引用，产生大量的垃圾对象，这时gc根据策略会对垃圾内存进行清理并整理未标记地非垃圾对象以清除堆内存中的“空洞”，避免内存浪费。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      GC的工作原理？
+     </strong>
+    </p>
+    <p class="paragraph">
+     C#这里GC由CLR进行管理，
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      如何优化GC？
+     </strong>
+    </p>
+    <p class="paragraph">
+     在开发过程中，常见的针对于gc优化的思路有：
+    </p>
+    <p class="paragraph">
+     1.减少gc过程的时间消耗。（自己举例说明减少GC的常见场景）
+    </p>
+    <p class="paragraph">
+     2.在非关键时间主动进行gc。（切换场景时，各种玩家非游玩加载时刻，主动GC）
+    </p>
+    <p class="paragraph">
+     3.降低gc进行的频率。（根据项目实际场景，调整GC进行的频率）
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      接口与抽象类的区别？
+     </strong>
+    </p>
+    <p class="paragraph">
+     接口里不能包含方法的实现而抽象类可以，接口是完全抽象的，完全不能实例化，而抽象类可以间接实例化，接口可以被类多继承，抽象类只能被单继承。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      For与foreach的主要区别？
+     </strong>
+    </p>
+    <p class="paragraph">
+     Foreach会锁定集合中的对象使其不能修改，使用for即使用索引遍历，这个索引值是可以根据索引对所遍历集合进行修改的。Foreach访问对象所实现迭代器接口方法进行迭代，for通过列表接口进行访问。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      关键字 Sealed的作用？
+     </strong>
+    </p>
+    <p class="paragraph">
+     用于类，即密封该类禁止派生
+    </p>
+    <p class="paragraph">
+     用于函数，即密封该函数禁止覆写，用于密封override方法。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      反射的使用？
+     </strong>
+    </p>
+    <p class="paragraph">
+     反射是动态绑定的编程方式，该技术可用于在运行时获取信息。
+    </p>
+    <p class="paragraph">
+     反射获取成员时，能从外部访问该类自身私有属性不能获取继承的私有成员，其访问权限只在相应类中，但能通过父类公开属性或方法获得或修改。(Java貌似可以)
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      .Net 与 Mono 的关系？
+     </strong>
+    </p>
+    <p class="paragraph">
+     .net是一个语言开发平台，mono是基于此实现了.net编译器CLR和基础类库开发的跨平台开发环境，因为有mono使用.net开发的程序才能运行在各个不同的平台上。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      委托和接口的区别与应用？
+     </strong>
+    </p>
+    <p class="paragraph">
+     接口是约束类应遵守实现要求的一个集合声明，不能实例化，但可引用或实例化包含其接口实现的具体对象，一般用于两个模块之间制定开发协约方便维护与开发与实现类的多态。委托是一个特殊类型，一般用于传递对方法的引用。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      unsafe关键字的作用？
+     </strong>
+    </p>
+    <p class="paragraph">
+     用来定义不安全代码段，进行指针相关操作下使用。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      频繁创建使用某个对象如何节省内存？
+     </strong>
+    </p>
+    <p class="paragraph">
+     缓存该对象避免频繁创建与销毁，或是使用对象池循环调用内部对象。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      JIT 和AOT区别？
+     </strong>
+    </p>
+    <p class="paragraph">
+     Jit是指即时编译，AOT是指预先完全编译，两者在运行速率占用空间安装时间方面有区别。IOS平台禁止JIT。
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <h3 class="heading">
+   Unity部分
+  </h3>
+  <ul class="list">
+   <li>
+    <p class="paragraph">
+     引擎向
+    </p>
+    <ul class="list">
+     <li>
+      <p class="paragraph">
+       <strong>
+        monobehaviour的update fixedupdate lateupdate的区别？
+       </strong>
+      </p>
+      <p class="paragraph">
+       fixedupdate用于做物理检测，一般是固定间隔帧执行，update是每一帧执行，lateupdate是晚于update执行，一般可用于摄像机移动或者一些强置后逻辑。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       如果游戏比较卡，那么fixedupdate还能按固定的时间执行么？执行多少次？如果游戏卡了，把物体的碰撞检测放到fixedupdate里，还能检测到碰撞么？如果检测不到，如何处理？
+      </p>
+      <p class="paragraph">
+       不能，最坏情况预期按照maximum timestep来计算，检测得到，如果检测不到，考虑调整检测条件，最好是通过射线相关去做物理检测。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        什么是协程？
+       </strong>
+      </p>
+      <p class="paragraph">
+       协程是一段分部执行逻辑的程序，当满足特定条件是会挂起，直到条件满足又被唤醒继续执行后部分的代码。简单理解为分帧（或其他时间间隔）的还是在主线程上执行的程序。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        GUI与UGUI的优点和缺点？
+       </strong>
+      </p>
+      <p class="paragraph">
+       GUI是脚本式编写，在OnGUI生命周期函数中编写，UGUI使用canvas画布系统与事件系统并且所见即所得，且易于做适配与敏捷开发。总的来说就是方便开发且易于控制。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        一个场景放置多个carmera并同时处于活动状态，会发生什么？
+       </strong>
+      </p>
+      <p class="paragraph">
+       依据深度覆盖显示，此时可设置view的宽高与xy值移动摄像机视图来达到同一个时刻显示多个摄像机画面内容。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        物体发生碰撞的必要条件？
+       </strong>
+      </p>
+      <p class="paragraph">
+       双方必须要有碰撞器，其中一个还必须要有刚体，但是还有一个特殊的组件，角色控制组件，charactercontroller。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        U3D 中用于记录节点空间几何信息的组件名称，及其父类名称
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       Transform与compoent。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        Render 的作用？描述 MeshRender 和 SkinnedMeshRender 的关系与不同
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       Render类包含了所有渲染器的通用功能，meshrender是网格渲染器，将网格模型可视化的关键组件能设置有关其对象身上的渲染光照与贴图等信息，skinnedmeshrender是蒙皮渲染器。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        了解哪些第三方插件
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       DoTween XLua ToLua ......
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        Prefab 的作用？如何在移动环境的设备下恰当地使用它
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       预置体常用来持久化模块或资源，恰当使用基于其的变体等能便于协作式的模块化开发统一修改与优化。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        如何销毁一个 UnityEngine.Object 及其子类
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       Destroy，DestroyImmediate
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        为什么 Unity3D 中会发生在组件上出现数据丢失的情况
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       引用丢失的情况一般是meta文件丢失或被异常修改。编辑器中删除被引用的对象也会出现引用丢失的情况。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        如何安全的在不同工程间安全地迁移 asset 数据
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       迁移asset可以通过打包，unity提供的asset服务，git协作拉取文件等，拷贝工程文件也可以不丢失引用的迁移。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        MeshCollider 和其他 Collider 的主要不同点
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       Meshcollider是基于网格顶点进行碰撞计算的。由无数个小三角形组成，其他的例如boxcollider是unity基本的元碰撞器，性能消耗相比小了很多。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        当一个细小的高速物体撞向另一个较大的物体时，会出现什么情况？如何避免
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       可能会出现检测不到碰撞，最直接的方式是做射线检测，较为不常用的方式是增加碰撞检测范围或者降低速度，具体使用会视应用场景而定。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        MeshRender 中 material 和 sharedmaterial 的区别
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       对material进行修改只会影响当前所引用实例。修改sharedmaterial会影响所有使用该材质的实例包括资源本身。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        用 u3d 实现 2d 游戏有几种方式
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       摄像机的渲染模式改为正交、还有2D模式。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        Unity3d 中的碰撞器和触发器的区别
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       触发器是碰撞器的一个属性，也就是说碰撞器是触发器的载体，触发器不会产生碰撞效果，只是在发生碰撞的三个不同阶段会触发回调方法。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        动画层(Animation Layers)的作用
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       一般是复杂动画系统中会使用动画分层，作用分别是复用动画与遮罩分层。分隔开不同部分的动画同时应用遮罩在不同部位播放指定部位动画。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        Material 和 Physic Material 区别
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       物理材质是描述对象所使用的物理材质，即它如何处理摩擦弹力等情况。材质是描述对象显示方面的信息。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        什么是导航网格（ NavMesh）
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       Unity自带的寻路网格系统，烘培好路径后可以用于寻路。Unity最新更新的有runtime烘焙解决方案，github上去搜索preview版本组件。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        UGUI的适配
+       </strong>
+       ?
+      </p>
+      <p class="paragraph">
+       UGUI有三种比例模式，分别是固定像素大小，屏幕空间比例大小，固定物理大小。一般使用根据屏幕空间比例大小进行缩放的模式来做UI的适配。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        Unity3D中的协程（coroutine）和C#线程之间的区别
+       </strong>
+       ?
+      </p>
+      <p class="paragraph">
+       协程是Mono脚本生命周期回调方法的一部分，协程还是在同一协程内执行的，只不过利用yield关键字挂起了执行流程，是Unity多只能单线程执行mono的一个替换措施。不考虑虚拟核心的情况下，线程是在不同CPU核心上执行的原子操作。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        Unity3D 是否支持写成多线程程序？如果支持的话需要注意什么？
+       </strong>
+      </p>
+      <p class="paragraph">
+       可以写多线程程序，但是只有主线程能够调用执行u3d中大部分API，一些unity定义的基本结构可以在分线程进行运算比如Vector3。不是UnityEngine的Api能在分线程执行。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        OnEnable、Awake、Start 运行时的发生顺序？哪些可能在同一个对象周期中反复的发生？
+       </strong>
+      </p>
+      <p class="paragraph">
+       Awake()-&gt;OnEnable()-&gt;Start(),OnEnable()可以，因为它是在对象被激活的时候触发的回调方法。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        请简述 OnBecameVisible 及 OnBecameInvisible 的发生时机，以及这一对回调函数的意义？
+       </strong>
+      </p>
+      <p class="paragraph">
+       当对象在所有摄像机中可见（被渲染时）与不可见时回调。可用于在这一时期做自定义的优化逻辑。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        Unity3D 如何获知场景中需要加载的数据？
+       </strong>
+      </p>
+      <p class="paragraph">
+       读取场景asset文件，获取文件内相关信息。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        物体发生碰撞时，有几个阶段，分别对应的函数？
+       </strong>
+      </p>
+      <p class="paragraph">
+       Oncollisionenter\stay\exit
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        刚体几种施加力的方式？
+       </strong>
+      </p>
+      <p class="paragraph">
+       addforce 与addforceatposition
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        物体自旋转使用的函数？
+       </strong>
+      </p>
+      <p class="paragraph">
+       Rotate与Rotatearound
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        u3d 提供了一个用于保存读取数据的类，（playerPrefs），请列出保存读取整形数据的函数?
+       </strong>
+      </p>
+      <p class="paragraph">
+       playerprefs.setint与getint
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        物理更新一般在哪个系统函数里?
+       </strong>
+      </p>
+      <p class="paragraph">
+       Fixedupdate里，采用固定帧率更新移动相机动作在哪个函数里，为什么在这个函数里。放在lateupdate里，避免抖动。按照强逻辑顺序执行。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        当游戏中需要频繁创建一个物体时，我们需要怎样做能够节省内存？
+       </strong>
+      </p>
+      <p class="paragraph">
+       使用对象池
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        unity3D从唤醒到销毁有一段生命周期，列出系统自己调用的重要方法。
+       </strong>
+      </p>
+      <p class="paragraph">
+       Awake()
+      </p>
+      <p class="paragraph">
+       Reset()
+      </p>
+      <p class="paragraph">
+       OnEnable()
+      </p>
+      <p class="paragraph">
+       Start()
+      </p>
+      <p class="paragraph">
+       OnFixedUpdate()
+      </p>
+      <p class="paragraph">
+       OnUpdate()
+      </p>
+      <p class="paragraph">
+       OnLateUpdate()
+      </p>
+      <p class="paragraph">
+       OnDisable()
+      </p>
+      <p class="paragraph">
+       OnDestory()
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        如何解决过多创建和删除对象带来的卡顿问题？
+       </strong>
+      </p>
+      <p class="paragraph">
+       可以利用对象池或者放进协程处理等操作。
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p class="paragraph">
+     渲染向
+    </p>
+    <ul class="list">
+     <li>
+      <p class="paragraph">
+       <strong>
+        图形渲染管线的流程是什么？图形管线一开始要做什么？mvp是什么？光栅化有什么用？
+       </strong>
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        UGUI中渲染如何重绘的过程落实到代码上是如何进行的？
+       </strong>
+      </p>
+      <p class="paragraph">
+       去读UGUI源码解析，重绘相关过程结合工程进行理解。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        常见渲染优化
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       LOD技术，利用lodgroup根据距离调整模型的模型精度，降低远距离模型的面数。
+      </p>
+      <p class="paragraph">
+       遮挡剔除技术。
+      </p>
+      <p class="paragraph">
+       Mipmap，实时加载摄像机渲染场景内的对象纹理。
+      </p>
+      <p class="paragraph">
+       Batching场景模型渲染合并。
+      </p>
+      <p class="paragraph">
+       应用遮挡剔除。
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <h3 class="heading">
+   算法部分
+  </h3>
+  <ul class="list">
+   <li>
+    <p class="paragraph">
+     数据结构
+    </p>
+    <ul class="list">
+     <li>
+      <p class="paragraph">
+       <strong>
+        数组和链表的区别
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       数组在内存中连续，链表不连续，数组查找效率更高，随机访问性强，增删不易；链表增删容易，随机访问性弱，查找效率相比较起来没有数组高。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        字典的实现原理？字典为什么查找快？hash的原理是什么？hash查找的时间复杂度是多少？hash查找冲突的情况如何处理
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       C#中字典根据hashcode方法生成hash值当键的值与其所对应值关联起来，只需要一个映射方法就能找到目标值，hash的原理是数学哈希算法，有很多种，冲突的话可以通过开放地址法，也就是沿一个序列帧继续向下寻找下一个空位。还有再哈希法，冲突时，再执行第二个哈希函数，直到无冲突发生。建立公共溢出区，一旦发生冲突的元素，一律填入溢出表。链地址法，分配到同一个地址的元素用next指针链接起来，被分配到同一个索引上的多个节点可以用这个单向表链接起来。
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p class="paragraph">
+     算法
+    </p>
+    <ul class="list">
+     <li>
+      <p class="paragraph">
+       <strong>
+        A star的原理是什么？A star找到的是最短的路径么？如果找不到路径，玩家会停在哪里？如果路径中有飞行路径或者游泳路径，该怎么处理
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       A star通过切分地图，构建合理的路径距离价值评估，构建了一个f(cost) = 当前已走路径消耗+预期与目标点的路径消耗，并预期这个cost值足够小，即控制后者足够小，能找到最短的可行路径。如果找不到路径会停在障碍物（距离最近）处，看具体飞行路径或游泳路径的移动cost与正常路径做对比，设置不同的移动路径cost来改变算法的计算结果。
+      </p>
+      <p class="paragraph">
+       https://cloud.tencent.com/developer/article/1621025
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        FSM原理，实现逻辑，解决什么问题
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       太繁琐，直接去搜索。
+      </p>
+     </li>
+     <li>
+      <p class="paragraph">
+       <strong>
+        二叉树的遍历除了递归还有哪些方式
+       </strong>
+       ？
+      </p>
+      <p class="paragraph">
+       利用堆与队列模拟，直接遍历的形式，具体实现搜索。
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <h3 class="heading">
+   基础知识
+  </h3>
+  <ul class="list">
+   <li>
+    <p class="paragraph">
+     <strong>
+      点乘和叉乘的原理是什么？单位向量的点乘的结果的范围是多少？两个向量的夹角越来越大，点乘的结果会越来越小么？夹角的范围是多少？叉乘的结果和左手坐标系和右手坐标系有关系么？如果两个向量没有构成一个平面， 那么它们的叉乘结果是多少
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     点乘叉乘原理：数学定理及其证明翻书。结果范围是1到-1；会；0-180；从数值角度讲，没有区别，从实际表示意义讲，有区别，因为两者坐标系标准不同；是0.
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      欧拉角和四元数的区别是什么？万向节死锁如何处理
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     欧拉角会存在万向节死锁，四元数因为提高到了四维处理，所以不会，万向节死锁可通过将欧拉角变换为四元数进行旋转处理避免。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      线程同步的方式
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     volatile、lock、System.Threading.Interlocked、Monitor。区别于具体用法和原理，看书和百度。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      分页原理
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     分页是在分段的基础上将线性地址转化为物理地址.....参看OS虚拟化内存大章节。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      状态机模式，监听者模式，具体的实现
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     手撕设计模式，翻书。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      同步异步并发并行
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     同步和异步关注的是消息通信机制(synchronous communication/ asynchronous communication)。
+    </p>
+    <p class="paragraph">
+     同步，就是调用某个方法，调用方需等待这个调用返回结果才能继续往后执行。
+    </p>
+    <p class="paragraph">
+     异步，和同步相反 调用方不会立即得到结果，而是在调用发出后调用者可继续执行后续操作，被调用者通过状态来通知调用者，或者通过回掉函数来处理这个调用。
+    </p>
+    <p class="paragraph">
+     并发，在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间，且这几个程序都是在同一个
+     <a class="link" href="http://baike.baidu.com/view/2107226.htm">
+      处理机
+     </a>
+     上运行，但任一个时刻点上只有一个程序在处理机上运行。
+    </p>
+    <p class="paragraph">
+     并行，在操作系统中，一组程序按独立异步的速度执行，无论从微观还是宏观，程序都是一起执行的。
+    </p>
+    <p class="paragraph">
+     并发和异步的区别翻书（例如异步是并发的一种实现手段）。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     <strong>
+      常用设计模式及其实现
+     </strong>
+     ？
+    </p>
+    <p class="paragraph">
+     状态机 单例 对象池 监听者 享元  命令 ......实现网上查一下自己多写写。
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <h3 class="heading">
+   Lua
+  </h3>
+  <ul class="list">
+   <li>
+    <p class="paragraph">
+     Lua与C#交互的原理是什么？
+    </p>
+    <p class="paragraph">
+     这个蛮复杂的，结合动手去理解。多看看帖子吧。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     常见数据类型？
+    </p>
+    <p class="paragraph">
+     8种，nil number string function table thread userdata boolean
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     元表的用法？
+    </p>
+    <p class="paragraph">
+     看lua程序设计，模拟实现oop，操作符重载等很多用法。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     Lua类的实现？
+    </p>
+    <p class="paragraph">
+     ...
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     Lua的多继承？
+    </p>
+    <p class="paragraph">
+     ...
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     Lua如何进行性能优化？
+    </p>
+    <p class="paragraph">
+     luajit，luagc角度考虑
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     Lua为什么高效？
+    </p>
+    <p class="paragraph">
+     lua 是基于寄存器的虚拟机实现,语言的虚拟机指令设计非常简洁。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     为什么用Lua进行热更而不用C#？
+    </p>
+    <p class="paragraph">
+     都可以，看平台要求，现在也有ILRunTime的项目了。Lua规范约束弱，开发起来快。
+    </p>
+   </li>
+   <li>
+    <p class="paragraph">
+     热更新的基本流程是什么？
+    </p>
+    <p class="paragraph">
+     1.打开APP
+    </p>
+    <p class="paragraph">
+     2.读取本地数据版本号，发给服务端，请求是否匹配。
+    </p>
+    <p class="paragraph">
+     3.返回不匹配就去服务端拉新版本资源文件，匹配就进入游戏。
+    </p>
+    <p class="paragraph">
+     4.不匹配就移除本地已存在的，接着进行下载。
+    </p>
+    <p class="paragraph">
+     5.app读取资源，下载完后验证并使用，从服务器热更完成。
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <h3 class="heading">
+   社招工程向问题
+  </h3>
+  <ul class="list">
+   <li>
+    安卓平台只允许有一个文件夹下有权限读写，这个文件夹是什么？
+   </li>
+   <li>
+    各种OOP的工程向场景问题。
+   </li>
+   <li>
+    UI降DC的开发注意点与之相关的常见优化手段。
+   </li>
+   <li>
+    待补充......
+   </li>
+  </ul>
+  <p class="paragraph">
+   上面有一些问题我目前也还没有解决它（例如一些设计模式的具体工程应用），所以会待补充，希望自己有所见解的小伙伴也能够对这份文档进行补充，众人拾柴火焰高！
+  </p>
+  <p class="paragraph">
+   最后如果你耐心读到了这里，那么恭喜你忍受住枯燥梳理知识到这里，接下来就带着自信去参加面试吧！
+  </p>
+ </li>
+</ol>
+
+            </div>
+        </body>
+        </html>
+        

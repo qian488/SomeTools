@@ -1,0 +1,365 @@
+
+        <!DOCTYPE html>
+        <html lang="zh-CN">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>转换结果</title>
+            <style>
+            :root {
+  --primary-color: #87CEEB; /* 天蓝色 */
+  --secondary-color: #5F9EA0; /* 较深的天蓝色 */
+  --text-color: #333333;
+  --background-color: #F5F5F5;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  color: var(--primary-color);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  padding: 5px 10px;
+  background-color: #e6f3ff;
+  border-left: 5px solid var(--primary-color);
+}
+
+.paragraph {
+  margin-bottom: 1em;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.list {
+  margin-bottom: 1em;
+  padding-left: 2em;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  padding: 10px 10px 10px 30px;
+}
+
+.link {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.list li {
+  margin-bottom: 0.5em;
+}
+
+.code-block {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+}
+
+.code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+  padding: 0;
+}
+
+.inline-code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar li a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1 class="heading">
+ Markdown转HTML工具
+</h1>
+<p class="paragraph">
+ 这是一个带有图形用户界面的Markdown转HTML工具。它允许用户选择Markdown文件和CSS样式文件,预览转换效果,并生成最终的HTML文件。
+</p>
+<h2 class="heading">
+ 主要功能
+</h2>
+<ol class="list">
+ <li>
+  选择Markdown文件
+ </li>
+ <li>
+  选择CSS样式文件
+ </li>
+ <li>
+  预览转换效果
+ </li>
+ <li>
+  生成HTML文件
+ </li>
+</ol>
+<h2 class="heading">
+ 使用方法
+</h2>
+<ol class="list">
+ <li>
+  <p class="paragraph">
+   运行程序,会出现图形用户界面。
+  </p>
+ </li>
+ <li>
+  <p class="paragraph">
+   选择Markdown文件:
+  </p>
+  <ul class="list">
+   <li>
+    点击"选择Markdown文件"旁边的"浏览"按钮
+   </li>
+   <li>
+    在弹出的文件选择对话框中选择您的Markdown文件
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p class="paragraph">
+   选择CSS文件:
+  </p>
+  <ul class="list">
+   <li>
+    点击"选择CSS文件"旁边的"浏览"按钮
+   </li>
+   <li>
+    在弹出的文件选择对话框中选择您的CSS样式文件
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p class="paragraph">
+   预览效果:
+  </p>
+  <ul class="list">
+   <li>
+    点击"预览"按钮
+   </li>
+   <li>
+    程序会在您的默认浏览器中打开一个临时HTML文件,展示转换效果
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p class="paragraph">
+   选择输出HTML文件:
+  </p>
+  <ul class="list">
+   <li>
+    点击"选择输出HTML文件"旁边的"浏览"按钮
+   </li>
+   <li>
+    在弹出的文件保存对话框中选择保存位置和文件名
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p class="paragraph">
+   转换:
+  </p>
+  <ul class="list">
+   <li>
+    点击"转换"按钮
+   </li>
+   <li>
+    程序会生成最终的HTML文件,并显示成功消息
+   </li>
+  </ul>
+ </li>
+</ol>
+<h2 class="heading">
+ 注意事项
+</h2>
+<ul class="list">
+ <li>
+  确保选择了正确的Markdown文件和CSS文件
+ </li>
+ <li>
+  预览功能使用临时文件,不会影响您的原始文件
+ </li>
+ <li>
+  转换完成后,可以在选择的输出位置找到生成的HTML文件
+ </li>
+</ul>
+<h2 class="heading">
+ 技术细节
+</h2>
+<p class="paragraph">
+ 本程序使用Python编写,主要依赖以下库:
+</p>
+<ul class="list">
+ <li>
+  <code class="inline-code">
+   tkinter
+  </code>
+  : 用于创建图形用户界面
+ </li>
+ <li>
+  <code class="inline-code">
+   markdown2
+  </code>
+  : 用于将Markdown转换为HTML
+ </li>
+ <li>
+  <code class="inline-code">
+   BeautifulSoup
+  </code>
+  : 用于处理HTML,添加类名
+ </li>
+ <li>
+  <code class="inline-code">
+   webbrowser
+  </code>
+  : 用于在默认浏览器中打开预览文件
+ </li>
+</ul>
+<h2 class="heading">
+ 自定义样式
+</h2>
+<p class="paragraph">
+ 您可以创建自己的CSS文件来自定义输出HTML的样式。程序会将CSS文件的内容直接嵌入到生成的HTML文件中。
+</p>
+<h2 class="heading">
+ 故障排除
+</h2>
+<p class="paragraph">
+ 如果遇到问题:
+</p>
+<ol class="list">
+ <li>
+  确保所有必要的Python库都已安装
+ </li>
+ <li>
+  检查选择的文件路径是否正确
+ </li>
+ <li>
+  确保有足够的权限读取输入文件和写入输出文件
+ </li>
+</ol>
+<p class="paragraph">
+ 如果问题仍然存在,请检查控制台输出以获取更多错误信息。
+</p>
+
+            </div>
+        </body>
+        </html>
+        

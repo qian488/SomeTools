@@ -1,5 +1,8 @@
 # SomeTools
 自己随便编写的一些小工具玩玩
+
+不限制只用c#了，python写小工具挺好用的
+
 ### NumberPicker
 简单抽号器
 
