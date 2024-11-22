@@ -6,6 +6,12 @@
 # README pictures
 README.assets/
 
+# log
+/log.txt
+*.log
+*log*.txt
+*log*.md
+
 # User-specific files
 *.rsuser
 *.suo
