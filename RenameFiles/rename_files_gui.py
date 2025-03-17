@@ -45,7 +45,7 @@ def generate_new_filename(filename, index, prefix, suffix, naming_rule):
     file_info = get_file_info(filename)
     
     if naming_rule == "默认":
-        new_name = f"{prefix}{index:03d}{suffix}{file_ext}"
+        new_name = f"{prefix}{index:d}{suffix}{file_ext}"
     elif naming_rule == "创建日期":
         date_str = file_info['creation_time'].strftime("%Y%m%d")
         new_name = f"{prefix}{date_str}_{index:03d}{suffix}{file_ext}"
